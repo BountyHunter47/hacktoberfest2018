@@ -1,0 +1,24 @@
+package studydsa;
+import java.util.HashMap;
+
+public class Hashmap_Occuranace {
+
+    public static void main(String[] Hashmap) {
+
+    int[] array = {1,1,1,1,1,2,3,5,4,3,6,5,5};
+    HashMap<Integer,Integer> map = new HashMap<>();
+    int n = array.length;
+
+        for (int j : array) {
+            int fre = 1;
+            if (!map.containsKey(j)) {
+                map.put(j, fre);
+            } else {
+                fre = map.get(j);
+                map.put(j, fre + 1);
+            }
+        }
+
+        System.out.println(map);
+    }
+}
